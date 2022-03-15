@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.8.2/angular.min.js"></script>
+</head>
+<body ng-app="todolist">
+    
+    <div ng-controller="MainController">
+
+        <singlelist mylist="todo"></singlelist>
+        <input ng-model="addToDo">
+        <button ng-click="addItem(todo.list,addToDo)">Add this to To-Do</button><br><br>
+
+        <singlelist mylist="books"></singlelist>
+        <input ng-model="addBook">
+        <button ng-click="addItem(books.list,addBook)">Add Book to List</button>
+    </div>
+
+
+    <!-- Modules -->
+    <script type="text/javascript" src="js/app.js"></script>
+
+    <!-- Controllers -->
+    <script src="js/Controllers/MainController.js"></script>
+    
+    <!-- Directives -->
+    <script src="js/Directives/singlelist.js"></script>
+</body>
+</html>
